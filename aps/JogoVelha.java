@@ -50,14 +50,28 @@ public class JogoVelha {
         
     }
     private static void desenhaGrade() {
+        final String ANSI_RESET = "\u001B[0m";
+        final String ANSI_YELLOW = "\u001B[33m";
+        final String ANSI_CIAN = "\u001B[36m";
         System.out.print("\033[H\033[2J");
-        System.out.println("     1   2   3");
+        System.out.println(ANSI_CIAN + "     1   2   3" + ANSI_RESET);
         System.out.println();
-        System.out.println(" 1   " + grade[0][0] + " | " + grade[0][1] + " | " + grade[0][2]);
-        System.out.println("    ---+---+---");
-        System.out.println(" 2   " + grade[1][0] + " | " + grade[1][1] + " | " + grade[1][2]);
-        System.out.println("    ---+---+---");
-        System.out.println(" 3   " + grade[2][0] + " | " + grade[2][1] + " | " + grade[2][2]);
+        System.out.println(ANSI_CIAN + " 1   " + ANSI_RESET +
+                            grade[0][0] + ANSI_YELLOW + " | " +
+                            ANSI_RESET + grade[0][1] + ANSI_YELLOW +
+                            " | " + ANSI_RESET + grade[0][2]);
+        System.out.println(ANSI_YELLOW + "    ---+---+---" + ANSI_RESET);
+       
+        System.out.println(ANSI_CIAN + " 2   " + ANSI_RESET + 
+                            grade[1][0] + ANSI_YELLOW + " | " + 
+                            ANSI_RESET + grade[1][1] + ANSI_YELLOW + 
+                            " | " + ANSI_RESET + grade[1][2]);         
+        System.out.println(ANSI_YELLOW + "    ---+---+---" + ANSI_RESET);
+
+        System.out.println(ANSI_CIAN + " 3   " + ANSI_RESET +
+                            grade[2][0] + ANSI_YELLOW + " | " + 
+                            ANSI_RESET + grade[2][1] + ANSI_YELLOW + 
+                            " | " + ANSI_RESET + grade[2][2]);
         System.out.println();
         System.out.print(historico); 
     }
