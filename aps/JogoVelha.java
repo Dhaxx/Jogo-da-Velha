@@ -50,7 +50,7 @@ public class JogoVelha {
         
     }
     private static void desenhaGrade() {
-        for (int i = 0; i < 50; i++) System.out.println();
+        System.out.print("\033[H\033[2J");
         System.out.println("     1   2   3");
         System.out.println();
         System.out.println(" 1   " + grade[0][0] + " | " + grade[0][1] + " | " + grade[0][2]);
